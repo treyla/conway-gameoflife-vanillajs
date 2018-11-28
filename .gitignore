@@ -89,3 +89,7 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Not a Node Project
+# package.json
+# package-lock.json
