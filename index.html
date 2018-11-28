@@ -8,11 +8,22 @@
   <meta name="description" content="Conways Game of Life in Vanilla.js">
   <meta name="author" content="treyla">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/style.css?v=1.0">
 
 </head>
 
 <body>
-  <script src="src/app.js"></script>
+    <div id="container">
+  <canvas id="gameCanvas" width="500px" height="500px"></canvas>
+    </div>
+  <div>
+    <input type="button" id="btnReset" value="Set/Reset"/>
+    <input type="button" id="btnStop" value="Stop"/>
+  </div>
+  
+  <script type="module" src="src/app.js"></script>
+  <script type="module" src="src/modules/GameLoop.js"></script>
+  <script type="module" src="src/modules/Game.js"></script>
+  <script type="module" src="src/modules/Cell.js"></script>
 </body>
 </html>
