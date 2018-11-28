@@ -4,6 +4,6 @@ export default class Cell {
     this.positionY = positionY;
     this.width = widthHeight;
     this.height = widthHeight;
-    this.state = state;
+    this.state = state; // Dead (0) - Alive (1)
   }
 }
