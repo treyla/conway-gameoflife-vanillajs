@@ -91,5 +91,5 @@ lerna-debug.log
 Thumbs.db
 
 # Not a Node Project
-# package.json
-# package-lock.json
+package.json
+package-lock.json
