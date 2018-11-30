@@ -19,6 +19,12 @@ const privateMethods = {
           currentCell.width,
           currentCell.height,
         );
+        this.canvas2dContext.strokeRect(
+          currentCell.positionX * currentCell.height,
+          currentCell.positionY * currentCell.width,
+          currentCell.width,
+          currentCell.height,
+        );
       }
     }
   },
