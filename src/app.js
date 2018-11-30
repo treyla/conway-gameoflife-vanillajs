@@ -1,7 +1,7 @@
 import Game from './modules/Game.js';
 
-const GAME_MATRIX_COLUMN_CNT = 50;
-const GAME_MATRIX_ROW_CNT = 50;
+const GAME_MATRIX_COLUMN_CNT = 40;
+const GAME_MATRIX_ROW_CNT = 40;
 
 const GAME = new Game(
   GAME_MATRIX_COLUMN_CNT,
