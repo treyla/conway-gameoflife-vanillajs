@@ -11,7 +11,7 @@ const privateMethods = {
         if (currentCell.state === 0) {
           this.canvas2dContext.fillStyle = 'black';
         } else {
-          this.canvas2dContext.fillStyle = Utils.getRandomColor();
+          this.canvas2dContext.fillStyle = currentCell.color;
         }
         this.canvas2dContext.fillRect(
           currentCell.positionX * currentCell.height,
