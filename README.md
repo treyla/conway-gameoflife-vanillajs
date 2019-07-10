@@ -9,3 +9,5 @@ Open Backlog:
 - Implement presets
 - Optional: Make it look better
 - Optional: Performance optimizations
+
+https://lrstry-gameoflife.herokuapp.com/
