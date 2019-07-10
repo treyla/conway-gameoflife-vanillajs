@@ -7,5 +7,5 @@ Open Backlog:
 - Implement better drawing mode (MouseDown, MouseUp)
 - Implement better sizing and resizing of Canvas
 - Implement presets
-- Optional: Make it look even better :)
+- Optional: Make it look better
 - Optional: Performance optimizations
