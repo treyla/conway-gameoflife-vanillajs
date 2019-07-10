@@ -100,13 +100,15 @@ const privateMethods = {
 };
 
 export default class Game {
-  constructor(columnCount, rowCount) {
+  constructor() {
     this.fps = 10;
     this.gameLoop = new GameLoop(this, this.fps);
 
-    this.columnCount = columnCount;
-    this.rowCount = rowCount;
-    this.newCellSquareLength = Math.ceil(window.innerWidth / this.columnCount);
+    this.newCellSquareLength = 20;
+
+    this.aspectRatio = window.innerWidth / window.innerHeight;
+    this.columnCount = Math.floor((window.innerWidth / this.newCellSquareLength) * this.aspectRatio);
+    this.rowCount = Math.floor(this.columnCount * this.aspectRatio);
 
     this.matrix = privateMethods.randomizeAndGetCellSeed.call(this);
 
@@ -118,6 +120,14 @@ export default class Game {
 
   draw() {
     privateMethods.drawMatrix.call(this);
+  }
+
+  resize(newWidth, newHeight) {
+    const newAspectRatio = newWidth / newHeight;
+    this.columnCount = Math.floor((newWidth / this.newCellSquareLength) * newAspectRatio);
+    this.rowCount = Math.floor(this.columnCount * newAspectRatio);
+    // Add-remove cols and/or rows
+    this.draw();
   }
 
   startGameLoop() {

@@ -1,12 +1,6 @@
 import Game from './modules/Game.js';
 
-const GAME_MATRIX_COLUMN_CNT = 40;
-const GAME_MATRIX_ROW_CNT = 40;
-
-const GAME = new Game(
-  GAME_MATRIX_COLUMN_CNT,
-  GAME_MATRIX_ROW_CNT,
-);
+const GAME = new Game();
 
 document.getElementById('btnSingleStep').addEventListener('click', GAME.singleStepGameLoop.bind(GAME), false);
 document.getElementById('btnStart').addEventListener('click', GAME.startGameLoop.bind(GAME), false);
@@ -19,4 +13,8 @@ document.getElementById('speedSlider').addEventListener('change', (e) => {
 
 GAME.canvas.addEventListener('click', (e) => {
   GAME.clickCell(e.x, e.y);
+}, false);
+
+window.addEventListener('resize', (e) => {
+  GAME.resize(e.target.innerWidth, e.target.innerHeight);
 }, false);
